@@ -1,0 +1,140 @@
+html, body {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+
+#display {
+  padding: 10px 0;
+}
+
+
+input[type="text"], .select-box {
+  display: inline-block;
+  height: 15px;
+  width: 160px;
+  line-height: 15px;
+  vertical-align: top;
+  padding: 10px;
+  border: 1px solid #CCC;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+
+.virtually-hidden {
+  position: absolute;
+  left: -100000px;
+}
+
+
+.select-box {
+  position: relative;
+}
+
+
+.select-box::after {
+  content: ' > ';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  color: #ccc;
+  transform: rotate(90deg);
+  width: 31px;
+  line-height: 31px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.select-box:hover::after {
+  color: purple;
+}
+
+
+.select-box-label {
+  display: block;
+}
+
+
+.select-box-options-hidden {
+  height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+
+.select-box-options {
+  padding: 10px;
+  margin: 0 -1px;
+  background: #FFF;
+  list-style: none;
+  border: 1px solid #CCC;
+  border-top: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+
+.select-box-option {
+  line-height: 1.5em;
+  cursor: pointer;
+  -webkit-transition: text-indent 300ms;
+  -moz-transition: text-indent 300ms;
+  -ms-transition: text-indent 300ms;
+  -o-transition: text-indent 300ms;
+  transition: text-indent 300ms;
+}
+
+
+.select-box-option:not(.select-box-option-selected):hover {
+  color: lightgreen;
+}
+
+
+.select-box-option-selected {
+  color: purple;
+  text-indent: 10px;
+}
+
+
+.chip {
+  display: inline-block;
+  background-color: #EEE;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5px;
+  color: #666;
+}
+
+
+.chip:first-child {
+  margin-left: 0;
+}
+
+
+.chip-close {
+  border-radius: 15px;
+  margin-left: 5px;
+  font-size: 1em;
+  display: inline-block;
+  padding: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+
+button {
+  color: #FFF;
+  background-color: limegreen;
+  border: none;
+  line-height: 37px;
+  padding: 0 10px;
+}
